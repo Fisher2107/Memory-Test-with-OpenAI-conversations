@@ -1,0 +1,23 @@
+"NEO-4j":
+  user: "neo4j" # your-username-here
+  uri: "neo4j://127.0.0.1:7687" # your-port-here
+  pass: "password" # your-password-here
+
+openai_data:
+  data_folder: "input" # path_to_openai_export_folder
+  output_folder: "output" # folder_to_save_parsed_data
+
+model_config:
+  provider: OpenAI   # Required. Enum: OpenAI or Ollama.
+  # Note: if provider=OpenAI, ensure your API key is set via environment variable OPENAI_API_KEY.
+
+  # --- Optional: only needed if provider is Ollama ---
+  # api_key: "abc"   # Ollama doesn't require a real API key
+  # llm_model: "deepseek-r1:8b" 
+  # embed_model: "nomic-embed-text" 
+  # embed_dim: "768" 
+  # url: "http://localhost:11434" # ollama by defualt is http://localhost:11434
+
+# --- Optional --- Test logic not yet implemented
+test_questions:
+  test_file: "test.txt" # path_to_test_questions
